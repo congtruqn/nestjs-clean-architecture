@@ -14,4 +14,7 @@ export default new DataSource({
   password: process.env.DATABASE_PASSWORD,
   database: process.env.DATABASE_NAME,
   entities: [__dirname + './../../**/*.entity{.ts,.js}'],
+  synchronize: true,
+  migrationsRun: true,
+  migrations: ['migrations/**/*{.ts,.js}'],
 });
