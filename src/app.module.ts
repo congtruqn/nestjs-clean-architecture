@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppService } from './app.service';
 import { EnvironmentConfigModule } from './infrastructure/config/environment-config/environment-config.module';
 import { LoggerModule } from './infrastructure/logger/logger.module';
 import { ExceptionsModule } from './infrastructure/exceptions/exceptions.module';
@@ -14,6 +13,6 @@ import { ControllersModule } from './presentation/controllers/controllers.module
     RepositoriesModule,
     ControllersModule
   ],
-  providers: [AppService],
+  providers: [],
 })
 export class AppModule {}

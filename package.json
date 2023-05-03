@@ -19,11 +19,11 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "typeorm:win": "NODE_ENV=local ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js --config src/infrastructure/config/typeorm/typeorm.config.ts",
-    "typeorm:generate:win": "npm run typeorm:win migration:generate -- -n",
-    "typeorm:create:win": "npm run typeorm:win migration:create -n",
-    "typeorm:run:win": "npm run typeorm:win migration:run",
-    "typeorm:revert:win": "npm run typeorm:win migration:revert"
+    "typeorm": "ts-node ./node_modules/typeorm/cli",
+    "typeorm:run-migrations": "npm run typeorm migration:run -- -d ./src/infrastructure/config/typeorm/typeorm.config.ts",
+    "typeorm:generate-migration": "npm run typeorm -- -d ./src/infrastructure/config/typeorm/typeorm.config.ts migration:generate ./migrations/$npm_config_name",
+    "typeorm:create-migration": "npm run typeorm -- migration:create ./migrations/$npm_config_name",
+    "typeorm:revert-migration": "npm run typeorm -- -d ./src/infrastructure/config/typeorm/typeorm.config.ts migration:revert"
   },
   "dependencies": {
     "@nestjs/common": "^9.4.0",
