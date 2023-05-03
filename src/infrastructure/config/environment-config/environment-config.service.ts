@@ -5,7 +5,6 @@ import { JWTConfig } from '../../../domain/config/jwt.interface';
 
 @Injectable()
 export class EnvironmentConfigService implements DatabaseConfig, JWTConfig {
-  // eslint-disable-next-line prettier/prettier
   constructor(private configService: ConfigService) {}
 
   getJwtSecret(): string {

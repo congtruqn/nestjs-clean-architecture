@@ -20,7 +20,7 @@ export const getTypeOrmModuleOptions = (config: EnvironmentConfigService): TypeO
       migrationsDir: 'src/migrations',
     },
     // ssl: {
-    //   rejectUnauthorized: false,
+    //    rejectUnauthorized: true,
     // },
   } as TypeOrmModuleOptions);
 
