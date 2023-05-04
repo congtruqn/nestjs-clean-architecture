@@ -6,13 +6,7 @@ import { RepositoriesModule } from './infrastructure/repositories/repositories.m
 import { ControllersModule } from './presentation/controllers/controllers.module';
 
 @Module({
-  imports: [
-    EnvironmentConfigModule,
-    LoggerModule,
-    ExceptionsModule,
-    RepositoriesModule,
-    ControllersModule
-  ],
+  imports: [EnvironmentConfigModule, LoggerModule, ExceptionsModule, RepositoriesModule, ControllersModule],
   providers: [],
 })
 export class AppModule {}
