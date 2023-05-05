@@ -1,6 +1,6 @@
 import { TodoM } from '../model/todo';
 
-export interface TodoRepository {
+export interface ITodoRepository {
   insert(todo: TodoM): Promise<TodoM>;
   findAll(): Promise<TodoM[]>;
   findById(id: number): Promise<TodoM>;

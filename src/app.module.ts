@@ -3,10 +3,12 @@ import { EnvironmentConfigModule } from './infrastructure/config/environment-con
 import { LoggerModule } from './infrastructure/logger/logger.module';
 import { ExceptionsModule } from './infrastructure/exceptions/exceptions.module';
 import { RepositoriesModule } from './infrastructure/repositories/repositories.module';
-import { ControllersModule } from './presentation/controllers/controllers.module';
+import { TodoController } from './presentation/controllers/todo.controller';
+import { todoUsecases } from './usecases/todo/todo.usecases';
 
 @Module({
-  imports: [EnvironmentConfigModule, LoggerModule, ExceptionsModule, RepositoriesModule, ControllersModule],
-  providers: [],
+  imports: [EnvironmentConfigModule, LoggerModule, ExceptionsModule, RepositoriesModule],
+  controllers: [TodoController],
+  providers: [todoUsecases],
 })
 export class AppModule {}
