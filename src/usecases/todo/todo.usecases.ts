@@ -5,13 +5,12 @@ import { ITodoRepository } from '../../domain/repositories/todoRepository.interf
 
 @Injectable()
 export class todoUsecases {
-  
   constructor(
     @Inject('ITodoRepository')
-    private readonly todoRepository: ITodoRepository
+    private readonly todoRepository: ITodoRepository,
   ) {}
 
   async create(content: string): Promise<string> {
-    return "await todoRepository.";
+    return 'await todoRepository.';
   }
 }

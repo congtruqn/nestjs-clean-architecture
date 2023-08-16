@@ -6,6 +6,6 @@ import { RepositoriesModule } from '../../infrastructure/repositories/repositori
 @Module({
   imports: [RepositoriesModule],
   controllers: [TodoController],
-  providers:[todoUsecases]
+  providers: [todoUsecases],
 })
 export class ControllersModule {}

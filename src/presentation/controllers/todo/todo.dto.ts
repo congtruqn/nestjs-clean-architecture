@@ -6,6 +6,7 @@ export class UpdateTodoDto {
   @IsNotEmpty()
   @IsNumber()
   readonly id: number;
+
   @ApiProperty({ required: true })
   @IsNotEmpty()
   @IsBoolean()

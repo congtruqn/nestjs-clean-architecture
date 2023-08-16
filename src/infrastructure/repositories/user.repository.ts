@@ -21,7 +21,7 @@ export class DatabaseUserRepository implements IUserRepository {
   }
   async getUserByUsername(username: string): Promise<UserM> {
     const adminUserEntity = await this.userEntityRepository.findOneOrFail({
-      where: {username: username,},
+      where: { username: username },
     });
     if (!adminUserEntity) {
       return null;
